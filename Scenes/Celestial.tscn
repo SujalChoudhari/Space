@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Celestial.gd" type="Script" id=1]
+
+[sub_resource type="SphereMesh" id=5]
+
+[node name="Celistial" type="Spatial"]
+
+[node name="GFX" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = SubResource( 5 )
+material/0 = null
+script = ExtResource( 1 )

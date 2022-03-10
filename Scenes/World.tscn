@@ -6,10 +6,10 @@
 [node name="World" type="Spatial"]
 
 [node name="FreelookCamera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.0795726, 0.996829, 0, -0.996829, 0.0795726, 0, 232.275, -0.593849 )
+transform = Transform( 1, 0, 0, 0, 0.0795726, 0.996829, 0, -0.996829, 0.0795726, 0, 109.637, -0.594 )
 current = true
 near = 0.01
-far = 720.9
+far = 2000.0
 script = ExtResource( 1 )
 
 [node name="Generator" type="Node" parent="."]

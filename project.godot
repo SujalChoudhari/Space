@@ -9,13 +9,25 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Spatial",
+"class": "Celestial",
+"language": "GDScript",
+"path": "res://Scripts/Celestial.gd"
+}, {
 "base": "Camera",
 "class": "FreelookCamera",
 "language": "GDScript",
 "path": "res://Scripts/Free_Camera.gd"
+}, {
+"base": "Spatial",
+"class": "Star",
+"language": "GDScript",
+"path": "res://Scripts/Star.gd"
 } ]
 _global_script_class_icons={
-"FreelookCamera": ""
+"Celestial": "",
+"FreelookCamera": "",
+"Star": ""
 }
 
 [application]

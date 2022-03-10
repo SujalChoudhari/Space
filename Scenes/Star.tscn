@@ -1,32 +1,22 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Star.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Shaders/new_shadermaterial.tres" type="Material" id=2]
+
+[sub_resource type="SphereMesh" id=1]
+material = ExtResource( 2 )
 
 [node name="Star" type="Spatial"]
 script = ExtResource( 1 )
 
 [node name="GFX" type="MeshInstance" parent="."]
 use_in_baked_light = true
+mesh = SubResource( 1 )
+material/0 = null
 
-[node name="Light" type="SpotLight" parent="."]
-light_specular = 0.0
+[node name="OmniLight" type="OmniLight" parent="."]
+light_energy = 4.616
+light_indirect_energy = 4.0
 shadow_enabled = true
-spot_range = 4096.0
-spot_angle = 89.0
-spot_angle_attenuation = 4.14106
-
-[node name="Light2" type="SpotLight" parent="."]
-transform = Transform( -0.5, -0.75, -0.433013, 0, -0.5, 0.866025, -0.866025, 0.433013, 0.25, 0, 0, 0 )
-light_specular = 0.0
-shadow_enabled = true
-spot_range = 4096.0
-spot_angle = 89.0
-spot_angle_attenuation = 4.14106
-
-[node name="Light3" type="SpotLight" parent="."]
-transform = Transform( -0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, 0, 0, 0 )
-light_specular = 0.0
-shadow_enabled = true
-spot_range = 4096.0
-spot_angle = 89.0
-spot_angle_attenuation = 4.14106
+omni_range = 2048.0
+omni_shadow_mode = 0
